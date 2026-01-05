@@ -1,16 +1,37 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { Section } from '@/components/common/Section';
 import { Button } from '@/components/common/Button';
 
 export default function ServicesPage() {
+    const [isHeroVisible, setIsHeroVisible] = useState(false);
+
+    useEffect(() => {
+        setIsHeroVisible(true);
+    }, []);
+
     return (
         <>
-            <Section className="bg-gray-50 pt-24 pb-12">
-                <div className="text-center">
-                    <h1 className="text-4xl font-bold mb-6">Service & Price</h1>
-                    <p className="text-xl text-gray-600">합리적인 비용으로 경험하는 최고의 이미지 컨설팅</p>
+            <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-foreground">
+                <img
+                    src="/images/hd2.jpg"
+                    alt="Services Hero"
+                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out ${isHeroVisible ? 'scale-100' : 'scale-110'
+                        }`}
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
+
+                <div className={`relative z-10 text-center max-w-3xl mx-auto px-4 transition-all duration-1000 ease-out ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}>
+                    <span className="text-accent tracking-[0.2em] text-sm md:text-base uppercase mb-4 block font-medium">Service & Price</span>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">Style Consulting</h1>
+                    <p className="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                        합리적인 비용으로 경험하는 최고의 이미지 컨설팅<br />
+                        당신의 매력을 가장 잘 드러내는 기준을 제안합니다.
+                    </p>
                 </div>
-            </Section>
+            </section>
 
             <Section>
                 <h2 className="text-2xl font-bold mb-12 text-center">스타일 상담 (Style Consulting)</h2>
@@ -56,27 +77,51 @@ export default function ServicesPage() {
 
             <Section bg="gray">
                 <div className="grid md:grid-cols-2 gap-12">
-                    <div>
-                        <h2 className="text-2xl font-bold mb-6">Personal Shopping</h2>
-                        <div className="bg-white p-6 rounded-sm shadow-sm">
-                            <h3 className="text-lg font-bold mb-2">쇼핑 동행</h3>
-                            <p className="text-gray-600 mb-4">전문가가 동행하여 당신에게 딱 맞는 아이템을 찾아드립니다. 실패 없는 쇼핑을 경험하세요.</p>
-                            <div className="flex justify-between items-center border-t pt-4">
-                                <span className="text-gray-500">2시간 기준</span>
-                                <span className="font-bold text-xl">30만원</span>
+                    {/* Personal Shopping */}
+                    <div className="relative group overflow-hidden rounded-sm min-h-[400px] flex items-end">
+                        <img
+                            src="/images/so.jpg"
+                            alt="Personal Shopping"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        {/* Gradient overlay for better visibility of image while keeping text readable */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div className="relative p-6 md:p-8 w-full text-white">
+                            <h2 className="text-xl md:text-2xl font-bold mb-4 drop-shadow-lg">Personal Shopping</h2>
+                            <div className="bg-white/5 backdrop-blur-[1px] p-6 rounded-sm border border-white/10 hover:bg-white/10 transition-colors">
+                                <h3 className="text-lg font-bold mb-2">쇼핑 동행</h3>
+                                <p className="text-gray-200 mb-4 text-sm leading-relaxed drop-shadow-md">전문가가 동행하여 당신에게 딱 맞는 아이템을 찾아드립니다. 실패 없는 쇼핑을 경험하세요.</p>
+                                <div className="flex justify-between items-center border-t border-white/10 pt-4 mt-4">
+                                    <span className="text-gray-300 text-sm">2시간 기준</span>
+                                    <span className="font-bold text-xl">30만원</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h2 className="text-2xl font-bold mb-6">Corporate & Lecture</h2>
-                        <div className="bg-white p-6 rounded-sm shadow-sm">
-                            <h3 className="text-lg font-bold mb-4">기업 강의 및 교육</h3>
-                            <ul className="space-y-2 text-gray-600 text-sm mb-6">
-                                <li>• CEO 패션 강연 및 이미지 메이킹</li>
-                                <li>• 신입사원 비즈니스 매너 및 스타일</li>
-                                <li>• 취업 및 면접 스타일링 특강</li>
-                            </ul>
-                            <Button href="/contact" variant="text">강의 문의하기 →</Button>
+
+                    {/* Corporate & Lecture */}
+                    <div className="relative group overflow-hidden rounded-sm min-h-[400px] flex items-end">
+                        <img
+                            src="/images/le.jpg"
+                            alt="Corporate & Lecture"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div className="relative p-6 md:p-8 w-full text-white">
+                            <h2 className="text-xl md:text-2xl font-bold mb-4 drop-shadow-lg">Corporate & Lecture</h2>
+                            <div className="bg-white/5 backdrop-blur-[1px] p-6 rounded-sm border border-white/10 min-h-[220px] flex flex-col justify-between hover:bg-white/10 transition-colors">
+                                <div>
+                                    <h3 className="text-lg font-bold mb-4">기업 강의 및 교육</h3>
+                                    <ul className="space-y-3 text-gray-200 text-sm mb-6 drop-shadow-md">
+                                        <li className="flex items-center gap-2">• CEO 패션 강연 및 이미지 메이킹</li>
+                                        <li className="flex items-center gap-2">• 신입사원 비즈니스 매너 및 스타일</li>
+                                        <li className="flex items-center gap-2">• 취업 및 면접 스타일링 특강</li>
+                                    </ul>
+                                </div>
+                                <Button href="/contact" variant="outline" className="text-white border-white hover:bg-white hover:text-black self-start text-sm py-2">강의 문의하기 →</Button>
+                            </div>
                         </div>
                     </div>
                 </div>

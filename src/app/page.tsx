@@ -81,7 +81,7 @@ export default function Home() {
 
         <div className={`relative z-10 text-center max-w-4xl px-4 transition-all duration-1000 ease-out ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
-          <p className="text-white/90 font-medium mb-4 tracking-widest text-sm md:text-base uppercase shadow-sm">Hangyeol Fashion Image Institute</p>
+          <p className="text-white/90 font-medium mb-4 tracking-widest text-sm md:text-base uppercase">Hangyeol Fashion Image Institute</p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white tracking-tight leading-[1.15] break-keep drop-shadow-md">
             조용한 자신감은<br className="hidden md:block" /> 정확한 선택에서 시작됩니다
           </h1>

@@ -24,10 +24,11 @@ export function Header() {
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white border-b border-foreground/10">
-            <div className="max-w-screen-xl mx-auto px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
+            <div className="max-w-screen-xl mx-auto px-6 md:px-12 h-20 md:h-24 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="text-lg md:text-xl font-bold tracking-tight text-foreground" onClick={() => setIsMenuOpen(false)}>
-                    한결 패션이미지연구소
+                <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/images/logo.png" alt="한결 패션이미지연구소" className="h-10 md:h-12 w-auto object-contain" />
                 </Link>
 
                 {/* Desktop Nav */}
@@ -36,22 +37,22 @@ export function Header() {
                         <div key={item.href} className="relative group">
                             <Link
                                 href={item.href}
-                                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
+                                className="text-base font-semibold text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1"
                             >
                                 {item.label}
                             </Link>
 
                             {/* Dropdown for items with subItems */}
                             {item.subItems && (
-                                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                                    <div className="bg-white border border-gray-100 shadow-lg rounded-sm py-2 min-w-[120px] flex flex-col">
-                                        {item.subItems.map(sub => (
+                                <div className="absolute top-full left-0 pt-1 opacity-0 -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out">
+                                    <div className="flex gap-8 whitespace-nowrap py-1 px-1">
+                                        {item.subItems.map((subItem) => (
                                             <Link
-                                                key={sub.href}
-                                                href={sub.href}
-                                                className="px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-accent text-center whitespace-nowrap transition-colors"
+                                                key={subItem.href}
+                                                href={subItem.href}
+                                                className="text-sm font-medium text-foreground/60 hover:text-accent transition-colors"
                                             >
-                                                {sub.label}
+                                                {subItem.label}
                                             </Link>
                                         ))}
                                     </div>

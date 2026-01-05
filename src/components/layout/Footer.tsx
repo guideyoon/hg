@@ -6,10 +6,10 @@ export function Footer() {
 
     // Placeholder data - to be updated by user
     const companyInfo = {
-        ceo: '홍길동',
-        address: '서울특별시 강남구 테헤란로 123',
-        businessLicense: '123-45-67890',
-        contact: '02-123-4567 | contact@hangyeol.com'
+        ceo: '한결',
+        address: '울산광역시 남구 번영로 124번길 21, 206호',
+        businessLicense: '-',
+        contact: '010.8356.8839 | jjang122800@naver.com'
     };
 
     return (

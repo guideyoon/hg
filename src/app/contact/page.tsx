@@ -21,14 +21,14 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-2">Address</h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    서울특별시 강남구 테헤란로 123<br />
-                                    한결 패션이미지연구소 (삼성동)
+                                    울산광역시 남구 번영로 124번길 21, 206호<br />
+                                    한결 패션이미지연구소
                                 </p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-2">Phone & Email</h3>
-                                <p className="text-gray-600">02-123-4567</p>
-                                <p className="text-gray-600">contact@hangyeol.com</p>
+                                <p className="text-gray-600">010.8356.8839</p>
+                                <p className="text-gray-600">jjang122800@naver.com</p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-2">Operating Hours</h3>
@@ -37,8 +37,17 @@ export default function ContactPage() {
                             </div>
                         </div>
 
-                        <div className="mt-12 bg-gray-100 h-64 rounded-sm flex items-center justify-center text-gray-400 text-sm">
-                            Google Map Area
+                        <div className="mt-12 h-80 rounded-sm overflow-hidden border border-gray-200">
+                            <iframe
+                                src="https://maps.google.com/maps?q=울산광역시%20남구%20번영로%20124번길%2021%2C%20206호&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                title="한결 패션이미지연구소 지도"
+                                frameBorder="0"
+                            ></iframe>
                         </div>
                     </div>
 

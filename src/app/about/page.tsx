@@ -55,7 +55,7 @@ export default function AboutPage() {
                 </div>
             </Section>
 
-            <Section bg="gray" id="ceo">
+            <Section bg="gray" id="ceo" className="scroll-mt-32">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-2xl font-bold mb-4">CEO Message</h2>
@@ -77,7 +77,7 @@ export default function AboutPage() {
                 </div>
             </Section>
 
-            <Section id="specialty">
+            <Section id="specialty" className="scroll-mt-32">
                 <div className="max-w-screen-xl mx-auto">
                     <h2 className="text-3xl font-bold mb-12 text-center">Professional Fields</h2>
                     <div className="grid md:grid-cols-4 gap-6 text-center">
@@ -87,10 +87,21 @@ export default function AboutPage() {
                             </div>
                         ))}
                     </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 mt-12">
+                        <div className="rounded-sm overflow-hidden aspect-[3/4] relative">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src="/images/pf1.jpg" alt="Professional Field Visual 1" className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                        </div>
+                        <div className="rounded-sm overflow-hidden aspect-[3/4] relative">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src="/images/pf2.jpg" alt="Professional Field Visual 2" className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                        </div>
+                    </div>
                 </div>
             </Section>
 
-            <Section bg="gray" id="instructors">
+            <Section bg="gray" id="instructors" className="scroll-mt-32">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-2">한결 강사</h2>
@@ -101,7 +112,7 @@ export default function AboutPage() {
                         <div className="bg-white p-0 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                             <div className="aspect-[3/4] overflow-hidden relative">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/pc.jpg" alt="Personal Color Instructor" className="absolute inset-0 w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+                                <img src="/images/pc.jpg" alt="Personal Color Instructor" className="absolute inset-0 w-full h-full object-cover object-top scale-110 hover:scale-115 transition-transform duration-500" />
                             </div>
                             <div className="p-8">
                                 <h3 className="text-xl font-bold mb-2">김이름 강사</h3>
@@ -115,7 +126,7 @@ export default function AboutPage() {
                         <div className="bg-white p-0 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                             <div className="aspect-[3/4] overflow-hidden relative">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/fs.jpg" alt="Fashion Stylist Instructor" className="absolute inset-0 w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+                                <img src="/images/fs.jpg" alt="Fashion Stylist Instructor" className="absolute inset-0 w-full h-full object-cover object-top scale-110 hover:scale-115 transition-transform duration-500" />
                             </div>
                             <div className="p-8">
                                 <h3 className="text-xl font-bold mb-2">박스타일 강사</h3>

@@ -1,16 +1,37 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { Section } from '@/components/common/Section';
 import { Button } from '@/components/common/Button';
 
 export default function EducationPage() {
+    const [isHeroVisible, setIsHeroVisible] = useState(false);
+
+    useEffect(() => {
+        setIsHeroVisible(true);
+    }, []);
+
     return (
         <>
-            <Section className="bg-gray-50 pt-24 pb-12">
-                <div className="text-center max-w-3xl mx-auto">
-                    <h1 className="text-4xl font-bold mb-6">Expert Course</h1>
-                    <p className="text-xl text-gray-600">패션 이미지 컨설턴트 양성 과정</p>
+            <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-foreground">
+                <img
+                    src="/images/hd3.jpg"
+                    alt="Education Hero"
+                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out ${isHeroVisible ? 'scale-100' : 'scale-110'
+                        }`}
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
+
+                <div className={`relative z-10 text-center max-w-3xl mx-auto px-4 transition-all duration-1000 ease-out ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}>
+                    <span className="text-accent tracking-[0.2em] text-sm md:text-base uppercase mb-4 block font-medium">Expert Course</span>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">Academy</h1>
+                    <p className="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                        패션 이미지 컨설턴트 양성 과정<br />
+                        이미지의 기준을 세우는 전문가로 성장하는 길, 한결이 함께합니다.
+                    </p>
                 </div>
-            </Section>
+            </section>
 
             <Section>
                 <div className="max-w-4xl mx-auto">

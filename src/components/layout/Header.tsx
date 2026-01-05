@@ -23,7 +23,7 @@ export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-foreground/10">
+        <header className="sticky top-0 z-50 w-full bg-white border-b border-foreground/10">
             <div className="max-w-screen-xl mx-auto px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="text-lg md:text-xl font-bold tracking-tight text-foreground" onClick={() => setIsMenuOpen(false)}>

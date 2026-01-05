@@ -6,7 +6,12 @@ import { Button } from '@/components/common/Button';
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isHeroVisible, setIsHeroVisible] = useState(false);
   const images = ['/images/h1.png', '/images/h2.png'];
+
+  useEffect(() => {
+    setIsHeroVisible(true);
+  }, []);
 
   const videoRef = React.useRef<HTMLVideoElement>(null);
 
@@ -74,7 +79,8 @@ export default function Home() {
         {/* Overlay */}
         <div className="absolute inset-0 z-1 bg-black/40"></div>
 
-        <div className="relative z-10 text-center max-w-4xl px-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <div className={`relative z-10 text-center max-w-4xl px-4 transition-all duration-1000 ease-out ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}>
           <p className="text-white/90 font-medium mb-4 tracking-widest text-sm md:text-base uppercase shadow-sm">Hangyeol Fashion Image Institute</p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white tracking-tight leading-[1.15] break-keep drop-shadow-md">
             조용한 자신감은<br className="hidden md:block" /> 정확한 선택에서 시작됩니다

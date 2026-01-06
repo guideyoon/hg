@@ -24,13 +24,25 @@ export default function ContactPage() {
         setStatus('loading');
 
         try {
-            const response = await fetch('./contact.php', {
+            // 1. 먼저 Next.js API Route (Vercel/로컬 테스트용) 시도
+            let response = await fetch('/api/contact', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
+
+            // 2. 만약 API Route를 찾을 수 없는 경우 (정적 호스팅/PHP 환경), PHP 파일 시도
+            if (response.status === 404 || !response.ok) {
+                const phpResponse = await fetch('./contact.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData),
+                });
+
+                if (phpResponse.ok) {
+                    response = phpResponse;
+                }
+            }
 
             const result = await response.json();
 
@@ -43,6 +55,7 @@ export default function ContactPage() {
                 setStatusMessage(result.message || '오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
             }
         } catch (error) {
+            console.error('Submission error:', error);
             setStatus('error');
             setStatusMessage('서버와 통신 중 오류가 발생했습니다.');
         }

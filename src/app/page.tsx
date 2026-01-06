@@ -178,13 +178,33 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Scrolling Gallery */}
+      <section className="py-12 bg-white overflow-hidden">
+        <div className="flex animate-scroll whitespace-nowrap">
+          {/* Duplicate for seamless looping */}
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex gap-4 px-2">
+              {['g1.jpg', 'g2.jpg', 'g3.jpg', 'g4.jpg', 'g5.jpg'].map((src) => (
+                <div key={src} className="w-[300px] md:w-[450px] aspect-[4/3] flex-shrink-0 overflow-hidden rounded-sm">
+                  <img
+                    src={`/images/${src}`}
+                    alt="Gallery item"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <Section className="bg-foreground text-white text-center py-24">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">당신의 이미지를 새롭게 정의하세요</h2>
-        <p className="text-gray-300 mb-10 max-w-2xl mx-auto">
+      <Section className="bg-white text-center py-24 border-t border-gray-100">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">당신의 이미지를 새롭게 정의하세요</h2>
+        <p className="text-gray-600 mb-10 max-w-2xl mx-auto font-medium">
           망설임은 변화를 늦출 뿐입니다. 한결과 함께 가장 나다운 모습을 찾아보세요.
         </p>
-        <Button href="/contact" variant="secondary" size="lg">상담 신청하기</Button>
+        <Button href="/contact" variant="primary" size="lg">상담 신청하기</Button>
       </Section>
     </div>
   );

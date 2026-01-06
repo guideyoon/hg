@@ -6,9 +6,18 @@ import { Button } from '@/components/common/Button';
 
 export default function EducationPage() {
     const [isHeroVisible, setIsHeroVisible] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const expertImages = ['/images/j1.jpg', '/images/j2.jpg'];
 
     useEffect(() => {
         setIsHeroVisible(true);
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % expertImages.length);
+        }, 4000);
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -55,41 +64,56 @@ export default function EducationPage() {
                     </div>
 
                     <div className="bg-foreground text-white p-10 rounded-sm">
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b border-gray-700 pb-8">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 border-b border-gray-700 pb-8">
                             <div>
-                                <h2 className="text-2xl font-bold mb-2">통합 전문가 과정 (12주)</h2>
+                                <h2 className="text-2xl md:text-3xl font-bold mb-2">통합 전문가 과정 (12주)</h2>
                                 <p className="text-gray-400">이론과 실무, 취업 연계까지 한번에</p>
                             </div>
                             <div className="text-right mt-4 md:mt-0">
-                                <div className="text-3xl font-bold">350<span className="text-lg font-normal text-gray-400">만원</span></div>
+                                <div className="text-4xl font-bold">350<span className="text-xl font-normal text-gray-400 ml-1">만원</span></div>
                             </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-8 mb-10">
+                        {/* Large Image Slider */}
+                        <div className="relative w-full aspect-video rounded-sm overflow-hidden mb-12 shadow-2xl">
+                            {expertImages.map((src, index) => (
+                                <img
+                                    key={src}
+                                    src={src}
+                                    alt={`Education Course ${index + 1}`}
+                                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                                        }`}
+                                />
+                            ))}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <h4 className="font-bold mb-4 text-accent">교육 특징</h4>
-                                <ul className="space-y-2 text-sm text-gray-300">
-                                    <li>• 저작권 등록된 독자적 교육 자료 제공</li>
-                                    <li>• 현장 실습 및 포트폴리오 제작 지원</li>
-                                    <li>• 수료 후 협회 인증 자격증 발급</li>
-                                    <li>• 우수 수료생 파트너 강사 위촉</li>
+                                <h4 className="font-bold mb-6 text-accent text-lg tracking-wider uppercase">교육 특징</h4>
+                                <ul className="space-y-4 text-gray-300">
+                                    <li className="flex items-start gap-3">
+                                        <span className="text-accent mt-1">•</span>
+                                        <span>저작권 등록된 독자적 교육 자료 제공</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="text-accent mt-1">•</span>
+                                        <span>현장 실습 및 포트폴리오 제작 지원</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="text-accent mt-1">•</span>
+                                        <span>수료 후 협회 인증 자격증 발급</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="text-accent mt-1">•</span>
+                                        <span>우수 수료생 파트너 강사 위촉</span>
+                                    </li>
                                 </ul>
                             </div>
-                            <div>
-                                <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-full rounded-sm overflow-hidden">
-                                    {/* Using standard img tag as we are in static export mode with unoptimized images, 
-                                      and for simplicity with unknown dimensions. */}
-                                    <img
-                                        src="/images/j1.jpg"
-                                        alt="Education Course Atmosphere"
-                                        className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                                    />
-                                </div>
+                            <div className="text-center md:text-right">
+                                <p className="text-gray-400 mb-6 text-sm">전문가로 성장하는 가장 확실한 커리큘럼</p>
+                                <Button href="/contact" variant="secondary" size="lg">수강 상담 신청</Button>
                             </div>
-                        </div>
-
-                        <div className="text-center">
-                            <Button href="/contact" variant="secondary" size="lg">수강 상담 신청</Button>
                         </div>
                     </div>
                 </div>

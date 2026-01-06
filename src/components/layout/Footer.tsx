@@ -9,7 +9,7 @@ export function Footer() {
         ceo: '한결',
         address: '울산광역시 남구 번영로 124번길 21, 206호',
         businessLicense: '-',
-        contact: '010.8356.8839 | jjang122800@naver.com'
+        contact: '010.8356.8839 | bome0116@naver.com'
     };
 
     return (

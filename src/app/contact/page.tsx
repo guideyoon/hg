@@ -90,7 +90,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-2">Operating Hours</h3>
-                                <p className="text-gray-600">평일 10:00 - 19:00 (주말/공휴일 휴무)</p>
+                                <p className="text-gray-600">평일 08:00 - 18:00 (주말/공휴일 휴무)</p>
                                 <p className="text-sm text-gray-500 mt-2">* 모든 상담은 예약제로 운영됩니다.</p>
                             </div>
                         </div>

@@ -7,7 +7,7 @@
  */
 
 // --- 설정 (발급받으신 API Key를 입력해주세요) ---
-$resend_api_key = 're_RxGCmure_DtQjz6vtFceELquinZUxPKoY'; 
+$resend_api_key = 're_4NMjzEwR_Gw5wXgAEpPGsnsxiK4Mdzkrt'; 
 $to_email = 'wjdtn011601@gmail.com';
 $from_email = 'onboarding@resend.dev'; // 도메인 인증 전에는 onboarding@resend.dev 사용
 // ------------------------------------------

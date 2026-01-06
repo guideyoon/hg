@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend('re_RxGCmure_DtQjz6vtFceELquinZUxPKoY'); // Resend API 키
+const resend = new Resend('re_4NMjzEwR_Gw5wXgAEpPGsnsxiK4Mdzkrt'); // Resend API 키
 
 export async function POST(req: Request) {
     try {

@@ -104,7 +104,7 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-2">Phone & Email</h3>
                                 <p className="text-gray-600">010.8356.8839</p>
-                                <p className="text-gray-600">bome0116@naver.com</p>
+                                <p className="text-gray-600">jjang122800@naver.com</p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-2">Operating Hours</h3>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                                     type="text"
                                     id="name"
                                     className="w-full border border-gray-300 rounded-sm px-4 py-3 focus:outline-none focus:border-foreground"
-                                    placeholder="실명을 입력해주세요"
+                                    placeholder="성함을 입력해주세요"
                                     required
                                     value={formData.name}
                                     onChange={handleChange}
@@ -162,7 +162,7 @@ export default function ContactPage() {
                                     type="text"
                                     id="contact"
                                     className="w-full border border-gray-300 rounded-sm px-4 py-3 focus:outline-none focus:border-foreground"
-                                    placeholder="010-0000-0000"
+                                    placeholder="연락처를 입력해주세요"
                                     required
                                     value={formData.contact}
                                     onChange={handleChange}

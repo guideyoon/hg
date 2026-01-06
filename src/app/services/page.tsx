@@ -27,8 +27,8 @@ export default function ServicesPage() {
                     <span className="text-accent tracking-[0.2em] text-sm md:text-base uppercase mb-4 block font-medium">Service & Price</span>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">Style Consulting</h1>
                     <p className="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
-                        합리적인 비용으로 경험하는 최고의 이미지 컨설팅<br />
-                        당신의 매력을 가장 잘 드러내는 기준을 제안합니다.
+                        합리적인 비용으로 경험하는 <br className="md:hidden" />최고의 이미지 컨설팅<br />
+                        당신의 매력을 가장 잘 드러내는 <br className="md:hidden" />기준을 제안합니다.
                     </p>
                 </div>
             </section>

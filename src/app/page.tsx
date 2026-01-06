@@ -86,7 +86,7 @@ export default function Home() {
             조용한 자신감은<br className="hidden md:block" /> 정확한 선택에서 시작됩니다
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-12 font-light max-w-2xl mx-auto break-keep drop-shadow-sm">
-            유행보다 기준을, 과한 변화보다 당신에게 맞는 선택을 제안합니다.
+            유행보다 기준을, 과한 변화보다 <br className="md:hidden" />당신에게 맞는 선택을 제안합니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/services" className="bg-white text-foreground hover:bg-gray-100" size="lg">서비스 알아보기</Button>
@@ -129,7 +129,7 @@ export default function Home() {
       <Section bg="gray">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Professional Services</h2>
-          <p className="text-gray-600">개인 컨설팅부터 전문가 양성까지 전문적인 커리큘럼을 제공합니다</p>
+          <p className="text-gray-600">개인 컨설팅부터 전문가 양성까지<br className="md:hidden" /> 전문적인 커리큘럼을 제공합니다</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow border border-gray-100 group">
             <h3 className="text-xl font-bold mb-4 group-hover:text-accent transition-colors">스타일 상담</h3>
             <p className="text-gray-600 mb-6 text-sm leading-relaxed min-h-[80px]">
-              퍼스널 컬러, 체형 진단, 스타일링 제안을 통해 나만의 스타일 기준을 찾아드립니다.
+              퍼스널 컬러, 체형 진단, 스타일링 제안을 통해<br /> 나만의 스타일 기준을 찾아드립니다.
             </p>
             <ul className="text-sm text-gray-500 space-y-2 mb-8 border-t border-gray-100 pt-4">
               <li>• 베이직 스타일 (20만원)</li>
@@ -152,7 +152,7 @@ export default function Home() {
             <div className="absolute top-4 right-4 text-xs bg-accent text-white px-2 py-1 rounded-sm">Hot</div>
             <h3 className="text-xl font-bold mb-4 text-white">VIP 코스</h3>
             <p className="text-gray-300 mb-6 text-sm leading-relaxed min-h-[80px]">
-              단순 진단을 넘어 옷장 정리, 쇼핑 동행, 사후 관리까지 포함된 프리미엄 토탈 케어 프로그램입니다.
+              단순 진단을 넘어 옷장 정리, 쇼핑 동행, <br className="md:hidden" />사후 관리까지 포함된 프리미엄 토탈 케어<br className="md:hidden" /> 프로그램입니다.
             </p>
             <ul className="text-sm text-gray-400 space-y-2 mb-8 border-t border-gray-700 pt-4">
               <li>• 퍼스널 컬러 & 체형 진단</li>
@@ -200,9 +200,9 @@ export default function Home() {
 
       {/* CTA Section */}
       <Section className="bg-white text-center py-24 border-t border-gray-100">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">당신의 이미지를 새롭게 정의하세요</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">당신의 이미지를<br className="md:hidden" /> 새롭게 정의하세요</h2>
         <p className="text-gray-600 mb-10 max-w-2xl mx-auto font-medium">
-          망설임은 변화를 늦출 뿐입니다. 한결과 함께 가장 나다운 모습을 찾아보세요.
+          망설임은 변화를 늦출 뿐입니다. <br className="md:hidden" />한결과 함께 가장 나다운 모습을 찾아보세요.
         </p>
         <Button href="/contact" variant="primary" size="lg">상담 신청하기</Button>
       </Section>

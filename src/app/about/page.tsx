@@ -52,7 +52,7 @@ export default function AboutPage() {
                 <div className="grid md:grid-cols-2 gap-16">
                     <div>
                         <h2 className="text-2xl font-bold mb-6">Brand Story</h2>
-                        <div className="space-y-6 text-gray-600 leading-relaxed text-sm md:text-base text-justify break-keep">
+                        <div className="space-y-6 text-gray-600 leading-relaxed text-sm md:text-base break-keep">
                             <p>
                                 한결 패션이미지연구소는 “왜 옷이 중요한가” 라는 질문에서 출발했습니다.
                             </p>
@@ -100,7 +100,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="bg-white p-8 md:p-12 rounded-sm shadow-sm flex flex-col md:flex-row gap-8 items-center border border-gray-50">
-                        <div className="w-32 h-32 md:w-48 md:h-48 rounded-full flex-shrink-0 overflow-hidden border border-gray-100 flex items-center justify-center p-4 bg-gray-50">
+                        <div className="w-32 h-32 md:w-48 md:h-48 rounded-full flex-shrink-0 overflow-hidden border border-gray-100 flex items-center justify-center p-4 bg-white">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/images/logo.webp" alt="장한결 대표 로고" className="w-full h-auto object-contain scale-110" />
                         </div>

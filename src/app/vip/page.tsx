@@ -27,8 +27,8 @@ export default function VipPage() {
                     <span className="text-accent tracking-[0.2em] text-sm md:text-base uppercase mb-4 block font-medium">Premium Image Consulting</span>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-lg">VIP Total Care Course</h1>
                     <p className="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
-                        당신의 이미지를 완벽하게 설계하는 12주간의 여정.<br />
-                        단순한 스타일링을 넘어 라이프스타일의 품격을 높여드립니다.
+                        당신의 이미지를 완벽하게<br className="md:hidden" /> 설계하는 12주간의 여정.<br /><br className="md:hidden" />
+                        단순한 스타일링을 넘어<br className="md:hidden" /> 라이프스타일의 품격을 높여드립니다.
                     </p>
                 </div>
             </section>
@@ -38,39 +38,39 @@ export default function VipPage() {
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold mb-6">Course Details</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                            VIP 코스는 한결의 모든 노하우가 집약된 프리미엄 서비스입니다.
+                            VIP 코스는 한결의 모든 노하우가 집약된 프리미엄<br className="md:hidden" /> 서비스입니다.
                             초기 상담부터 사후 관리까지 전담 컨설턴트가 함께하며,
                             완벽한 이미지 변신을 보장합니다.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
-                        <div className="flex gap-4 p-6 border border-gray-50 rounded-sm hover:bg-gray-50 transition-colors">
+                        <div className="flex gap-4 p-4 border border-gray-50 rounded-sm hover:bg-gray-50 transition-colors">
                             <div className="w-12 h-12 bg-foreground text-background rounded-full flex-shrink-0 flex items-center justify-center font-bold">01</div>
                             <div>
                                 <h3 className="font-bold text-lg mb-2">심층 분석 (Deep Analysis)</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">퍼스널 컬러, 골격, 얼굴형, 이미지 정밀 진단</p>
+                                <p className="text-gray-600 text-sm leading-relaxed break-keep">퍼스널 컬러, 골격, 얼굴형, 이미지 정밀 진단</p>
                             </div>
                         </div>
-                        <div className="flex gap-4 p-6 border border-gray-50 rounded-sm hover:bg-gray-50 transition-colors">
+                        <div className="flex gap-4 p-4 border border-gray-50 rounded-sm hover:bg-gray-50 transition-colors">
                             <div className="w-12 h-12 bg-foreground text-background rounded-full flex-shrink-0 flex items-center justify-center font-bold">02</div>
                             <div>
                                 <h3 className="font-bold text-lg mb-2">옷장 큐레이팅</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">불필요한 옷 정리 및 기존 아이템 활용법 코칭</p>
+                                <p className="text-gray-600 text-sm leading-relaxed break-keep">불필요한 옷 정리 및 기존 아이템 활용법 코칭</p>
                             </div>
                         </div>
-                        <div className="flex gap-4 p-6 border border-gray-50 rounded-sm hover:bg-gray-50 transition-colors">
+                        <div className="flex gap-4 p-4 border border-gray-50 rounded-sm hover:bg-gray-50 transition-colors">
                             <div className="w-12 h-12 bg-foreground text-background rounded-full flex-shrink-0 flex items-center justify-center font-bold">03</div>
                             <div>
                                 <h3 className="font-bold text-lg mb-2">쇼핑 동행 (4회)</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">계절별, TPO별 핵심 아이템 쇼핑 동행</p>
+                                <p className="text-gray-600 text-sm leading-relaxed break-keep">계절별, TPO별 핵심 아이템 쇼핑 동행</p>
                             </div>
                         </div>
-                        <div className="flex gap-4 p-6 border border-gray-50 rounded-sm hover:bg-gray-50 transition-colors">
+                        <div className="flex gap-4 p-4 border border-gray-50 rounded-sm hover:bg-gray-50 transition-colors">
                             <div className="w-12 h-12 bg-foreground text-background rounded-full flex-shrink-0 flex items-center justify-center font-bold">04</div>
                             <div>
                                 <h3 className="font-bold text-lg mb-2">이미지 메이킹 교육 & 사후관리</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">스스로 스타일링하는 법 교육, 촬영 스타일링 및 피드백</p>
+                                <p className="text-gray-600 text-sm leading-relaxed break-keep">스스로 스타일링하는 법 교육, 촬영 스타일링 및 피드백</p>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@ export default function VipPage() {
                                 <h3 className="text-2xl font-bold mb-2">VIP 코스</h3>
                                 <div className="text-4xl font-bold text-foreground mb-6">180<span className="text-lg font-normal text-gray-500 ml-1">만원</span></div>
                                 <p className="text-sm text-gray-600 leading-relaxed break-keep mb-8">
-                                    계절이 바뀔 때마다 고민되는 옷장, 당신의 일상에 어울리는 진짜 스타일을 함께 찾습니다.<br />
+                                    계절이 바뀔 때마다 고민되는 옷장, 당신의 일상에 어울리는 진짜 스타일을 함께 찾습니다.<br /><br className="md:hidden" />
                                     트렌드는 참고만, 기준은 오직 당신
                                 </p>
                                 <Button href="/contact" fullWidth size="lg">VIP 상담 신청</Button>

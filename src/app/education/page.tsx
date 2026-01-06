@@ -37,7 +37,7 @@ export default function EducationPage() {
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">Academy</h1>
                     <p className="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
                         패션 이미지 컨설턴트 양성 과정<br />
-                        이미지의 기준을 세우는 전문가로 성장하는 길, 한결이 함께합니다.
+                        이미지의 기준을 세우는 전문가로 성장하는 길,<br className="md:hidden" />한결이 함께합니다.
                     </p>
                 </div>
             </section>

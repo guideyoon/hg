@@ -9,7 +9,7 @@ export function Footer() {
         ceo: '장한결',
         address: '울산광역시 남구 번영로 124번길 21, 206호',
         businessLicense: '-',
-        contact: '010.8356.8839 | bome0116@naver.com'
+        contact: '010.8356.8839 | jjang122800@naver.com'
     };
 
     return (
@@ -39,7 +39,7 @@ export function Footer() {
                         <li>{companyInfo.contact}</li>
                         <li>{companyInfo.address}</li>
                         <li className="pt-4 text-xs text-gray-500">
-                            대표: {companyInfo.ceo} | 사업자등록번호: {companyInfo.businessLicense}
+                            대표: {companyInfo.ceo}
                         </li>
                     </ul>
                 </div>

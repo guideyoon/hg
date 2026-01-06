@@ -115,7 +115,6 @@ export default function AboutPage() {
                                 <img src="/images/pc.jpg" alt="Personal Color Instructor" className="absolute inset-0 w-full h-full object-cover object-top scale-110 hover:scale-115 transition-transform duration-500" />
                             </div>
                             <div className="p-8">
-                                <h3 className="text-xl font-bold mb-2">김이름 강사</h3>
                                 <p className="text-accent text-sm mb-4">퍼스널 컬러 전문</p>
                                 <p className="text-gray-600 text-sm leading-relaxed">
                                     "색채가 주는 힘을 믿습니다. 당신의 피부톤과 이미지를 가장 돋보이게 하는 컬러를 찾아드립니다."
@@ -129,7 +128,6 @@ export default function AboutPage() {
                                 <img src="/images/fs.jpg" alt="Fashion Stylist Instructor" className="absolute inset-0 w-full h-full object-cover object-top scale-110 hover:scale-115 transition-transform duration-500" />
                             </div>
                             <div className="p-8">
-                                <h3 className="text-xl font-bold mb-2">박스타일 강사</h3>
                                 <p className="text-accent text-sm mb-4">패션 스타일리스트</p>
                                 <p className="text-gray-600 text-sm leading-relaxed">
                                     "유행보다는 나다움을, 화려함보다는 조화를 추구합니다. 당신의 라이프스타일에 맞는 최적의 핏을 제안합니다."

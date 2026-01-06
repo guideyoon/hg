@@ -84,20 +84,35 @@ export function Header() {
             </div>
 
             {/* Mobile Nav Drawer */}
-            {isMenuOpen && (
-                <div className="md:hidden absolute top-16 left-0 w-full bg-background border-b border-foreground/10 py-4 px-6 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top-2">
-                    {NAV_ITEMS.map((item) => (
+            {/* Mobile Nav Drawer */}
+            <div className={`md:hidden absolute top-16 left-0 w-full bg-background border-b border-foreground/10 py-4 px-6 flex flex-col gap-4 shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
+                {NAV_ITEMS.map((item) => (
+                    <div key={item.href}>
                         <Link
-                            key={item.href}
                             href={item.href}
-                            className="text-base font-medium text-foreground py-2 border-b border-foreground/5 last:border-0"
+                            className="text-base font-medium text-foreground py-2 border-b border-foreground/5 last:border-0 block"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             {item.label}
                         </Link>
-                    ))}
-                </div>
-            )}
+                        {/* Mobile Submenu Items (if any) */}
+                        {item.subItems && (
+                            <div className="pl-4 mt-2 flex flex-col gap-2 border-l border-foreground/10">
+                                {item.subItems.map((subItem) => (
+                                    <Link
+                                        key={subItem.href}
+                                        href={subItem.href}
+                                        className="text-sm text-gray-500 hover:text-accent py-1 block"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {subItem.label}
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
         </header>
     );
 }

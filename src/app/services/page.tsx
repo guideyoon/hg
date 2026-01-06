@@ -15,7 +15,7 @@ export default function ServicesPage() {
         <>
             <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-foreground">
                 <img
-                    src="/images/hd2.jpg"
+                    src="/images/hd2.webp"
                     alt="Services Hero"
                     className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out ${isHeroVisible ? 'scale-100' : 'scale-110'
                         }`}
@@ -80,7 +80,7 @@ export default function ServicesPage() {
                     {/* Personal Shopping */}
                     <div className="relative group overflow-hidden rounded-sm min-h-[400px] flex items-end">
                         <img
-                            src="/images/so.jpg"
+                            src="/images/so.webp"
                             alt="Personal Shopping"
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
@@ -103,7 +103,7 @@ export default function ServicesPage() {
                     {/* Corporate & Lecture */}
                     <div className="relative group overflow-hidden rounded-sm min-h-[400px] flex items-end">
                         <img
-                            src="/images/le.jpg"
+                            src="/images/le.webp"
                             alt="Corporate & Lecture"
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />

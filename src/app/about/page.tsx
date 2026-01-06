@@ -47,7 +47,7 @@ export default function AboutPage() {
                     <div className="relative h-64 md:h-auto min-h-[400px] rounded-sm overflow-hidden">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src="/images/b1.jpg"
+                            src="/images/b1.webp"
                             alt="Brand Philosophy Visual"
                             className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
                         />
@@ -91,11 +91,11 @@ export default function AboutPage() {
                     <div className="grid md:grid-cols-2 gap-8 mt-12">
                         <div className="rounded-sm overflow-hidden aspect-[3/4] relative">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/pf1.jpg" alt="Professional Field Visual 1" className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                            <img src="/images/pf1.webp" alt="Professional Field Visual 1" className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
                         </div>
                         <div className="rounded-sm overflow-hidden aspect-[3/4] relative">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src="/images/pf2.jpg" alt="Professional Field Visual 2" className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                            <img src="/images/pf2.webp" alt="Professional Field Visual 2" className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                         <div className="bg-white p-0 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                             <div className="aspect-[3/4] overflow-hidden relative">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/pc.jpg" alt="Personal Color Instructor" className="absolute inset-0 w-full h-full object-cover object-top scale-110 hover:scale-115 transition-transform duration-500" />
+                                <img src="/images/pc.webp" alt="Personal Color Instructor" className="absolute inset-0 w-full h-full object-cover object-top scale-110 hover:scale-115 transition-transform duration-500" />
                             </div>
                             <div className="p-8">
                                 <p className="text-accent text-sm mb-4">퍼스널 컬러 전문</p>
@@ -125,7 +125,7 @@ export default function AboutPage() {
                         <div className="bg-white p-0 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                             <div className="aspect-[3/4] overflow-hidden relative">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src="/images/fs.jpg" alt="Fashion Stylist Instructor" className="absolute inset-0 w-full h-full object-cover object-top scale-110 hover:scale-115 transition-transform duration-500" />
+                                <img src="/images/fs.webp" alt="Fashion Stylist Instructor" className="absolute inset-0 w-full h-full object-cover object-top scale-110 hover:scale-115 transition-transform duration-500" />
                             </div>
                             <div className="p-8">
                                 <p className="text-accent text-sm mb-4">패션 스타일리스트</p>

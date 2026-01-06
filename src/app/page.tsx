@@ -7,7 +7,7 @@ import { Button } from '@/components/common/Button';
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHeroVisible, setIsHeroVisible] = useState(false);
-  const images = ['/images/h1.png', '/images/h2.png'];
+  const images = ['/images/h1.webp', '/images/h2.webp'];
 
   useEffect(() => {
     setIsHeroVisible(true);
@@ -184,7 +184,7 @@ export default function Home() {
           {/* Duplicate for seamless looping */}
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-4 px-2">
-              {['g1.jpg', 'g2.jpg', 'g3.jpg', 'g4.jpg', 'g5.jpg'].map((src) => (
+              {['g1.webp', 'g2.webp', 'g3.webp', 'g4.webp', 'g5.webp'].map((src) => (
                 <div key={src} className="w-[300px] md:w-[450px] aspect-[4/3] flex-shrink-0 overflow-hidden rounded-sm">
                   <img
                     src={`/images/${src}`}

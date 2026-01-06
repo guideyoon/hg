@@ -28,7 +28,7 @@ export function Header() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/images/logo.png" alt="한결 패션이미지연구소" className="h-10 md:h-12 w-auto object-contain" />
+                    <img src="/images/logo.webp" alt="한결 패션이미지연구소" className="h-10 md:h-12 w-auto object-contain" />
                 </Link>
 
                 {/* Desktop Nav */}

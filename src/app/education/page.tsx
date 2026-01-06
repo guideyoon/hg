@@ -7,7 +7,7 @@ import { Button } from '@/components/common/Button';
 export default function EducationPage() {
     const [isHeroVisible, setIsHeroVisible] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const expertImages = ['/images/j1.jpg', '/images/j2.jpg'];
+    const expertImages = ['/images/j1.webp', '/images/j2.webp'];
 
     useEffect(() => {
         setIsHeroVisible(true);
@@ -24,7 +24,7 @@ export default function EducationPage() {
         <>
             <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-foreground">
                 <img
-                    src="/images/hd3.jpg"
+                    src="/images/hd3.webp"
                     alt="Education Hero"
                     className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out ${isHeroVisible ? 'scale-100' : 'scale-110'
                         }`}

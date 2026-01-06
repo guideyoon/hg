@@ -15,7 +15,7 @@ export default function VipPage() {
         <>
             <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-foreground">
                 <img
-                    src="/images/h3.jpg"
+                    src="/images/h3.webp"
                     alt="VIP Hero"
                     className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out ${isHeroVisible ? 'scale-100' : 'scale-110'
                         }`}

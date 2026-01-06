@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend('re_YOUR_API_KEY'); // Resend API 키
+const resend = new Resend('re_RxGCmure_DtQjz6vtFceELquinZUxPKoY'); // Resend API 키
 
 export async function POST(req: Request) {
     try {
@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
         const { data, error } = await resend.emails.send({
             from: 'onboarding@resend.dev', // 도메인이 없을 경우 기본 제공 도메인 사용
-            to: 'bome0116@naver.com',
+            to: 'wjdtn011601@gmail.com',
             subject: `[홈페이지 문의] ${name}님의 문의입니다.`,
             html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee;">

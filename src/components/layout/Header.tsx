@@ -21,6 +21,16 @@ const NAV_ITEMS = [
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        setExpandedMenu(null); // Reset submenu when closing main menu
+    };
+
+    const toggleSubMenu = (label: string) => {
+        setExpandedMenu(expandedMenu === label ? null : label);
+    };
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white border-b border-foreground/10">
@@ -65,7 +75,7 @@ export function Header() {
                 {/* Mobile Menu Button */}
                 <button
                     className="md:hidden p-2 text-foreground"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
                     {isMenuOpen ? (
@@ -84,31 +94,53 @@ export function Header() {
             </div>
 
             {/* Mobile Nav Drawer */}
-            {/* Mobile Nav Drawer */}
             <div className={`md:hidden absolute top-16 left-0 w-full bg-background border-b border-foreground/10 py-4 px-6 flex flex-col gap-4 shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
                 {NAV_ITEMS.map((item) => (
                     <div key={item.href}>
-                        <Link
-                            href={item.href}
-                            className="text-base font-medium text-foreground py-2 border-b border-foreground/5 last:border-0 block"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            {item.label}
-                        </Link>
-                        {/* Mobile Submenu Items (if any) */}
-                        {item.subItems && (
-                            <div className="pl-4 mt-2 flex flex-col gap-2 border-l border-foreground/10">
-                                {item.subItems.map((subItem) => (
-                                    <Link
-                                        key={subItem.href}
-                                        href={subItem.href}
-                                        className="text-sm text-gray-500 hover:text-accent py-1 block"
-                                        onClick={() => setIsMenuOpen(false)}
+                        {item.subItems ? (
+                            <>
+                                <button
+                                    onClick={() => toggleSubMenu(item.label)}
+                                    className="flex items-center justify-between w-full text-base font-medium text-foreground py-2 border-b border-foreground/5 last:border-0"
+                                >
+                                    {item.label}
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className={`transition-transform duration-300 ${expandedMenu === item.label ? 'rotate-180' : ''}`}
                                     >
-                                        {subItem.label}
-                                    </Link>
-                                ))}
-                            </div>
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedMenu === item.label ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                                    <div className="pl-4 flex flex-col gap-2 border-l border-foreground/10 mb-2">
+                                        {item.subItems.map((subItem) => (
+                                            <Link
+                                                key={subItem.href}
+                                                href={subItem.href}
+                                                className="text-sm text-gray-500 hover:text-accent py-1 block"
+                                                onClick={() => setIsMenuOpen(false)}
+                                            >
+                                                {subItem.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <Link
+                                href={item.href}
+                                className="text-base font-medium text-foreground py-2 border-b border-foreground/5 last:border-0 block"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                {item.label}
+                            </Link>
                         )}
                     </div>
                 ))}

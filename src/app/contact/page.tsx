@@ -68,23 +68,25 @@ export default function ContactPage() {
 
     return (
         <>
-            <Section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden p-0">
+            <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-foreground">
                 {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src="/images/cu.jpg"
-                        alt="Contact Hero"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/50"></div>
-                </div>
+                <img
+                    src="/images/cu.jpg"
+                    alt="Contact Hero"
+                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out ${isHeroVisible ? 'scale-100' : 'scale-110'
+                        }`}
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
 
-                <div className="relative z-10 text-center max-w-3xl mx-auto text-white mt-12">
-                    <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
-                    <p className="text-xl opacity-90 drop-shadow-md">당신의 변화를 위한 첫 걸음, 한결이 함께합니다.</p>
+                <div className={`relative z-10 text-center max-w-3xl mx-auto px-4 transition-all duration-1000 ease-out ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}>
+                    <span className="text-accent tracking-[0.2em] text-sm md:text-base uppercase mb-4 block font-medium">Contact Us</span>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">Get In Touch</h1>
+                    <p className="text-gray-200 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                        당신의 변화를 위한 첫 걸음, 한결이 함께합니다.
+                    </p>
                 </div>
-            </Section>
+            </section>
 
             <Section>
                 <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16">

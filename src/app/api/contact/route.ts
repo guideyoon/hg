@@ -9,12 +9,12 @@ export async function POST(req: Request) {
         const { name, contact, type, message } = body;
 
         const { data, error } = await resend.emails.send({
-            from: 'onboarding@resend.dev', // 도메인이 없을 경우 기본 제공 도메인 사용
+            from: '한결 패션이미지연구소 <onboarding@resend.dev>', // 도메인 인증 전 보낸이 표시 성함 수정
             to: 'wjdtn011601@gmail.com',
-            subject: `[홈페이지 문의] ${name}님의 문의입니다.`,
+            subject: `[한결 홈페이지 문의] ${name}님의 문의입니다.`,
             html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee;">
-                <h2 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 10px;">새로운 홈페이지 문의 (Resend)</h2>
+                <h2 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 10px;">새로운 홈페이지 문의</h2>
                 <p style="margin: 10px 0;"><strong>이름:</strong> ${name}</p>
                 <p style="margin: 10px 0;"><strong>연락처:</strong> ${contact}</p>
                 <p style="margin: 10px 0;"><strong>문의유형:</strong> ${type}</p>
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
                     <strong>문의내용:</strong><br>
                     ${message.replace(/\n/g, '<br>')}
                 </div>
-                <p style="font-size: 12px; color: #999; margin-top: 30px;">본 메일은 홈페이지 문의 폼을 통해 Resend API로 발송되었습니다.</p>
+                <p style="font-size: 12px; color: #999; margin-top: 30px;">본 메일은 한결 패션이미지연구소 홈페이지 문의 폼을 통해 발송되었습니다.</p>
             </div>
       `,
         });

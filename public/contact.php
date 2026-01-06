@@ -9,7 +9,7 @@
 // --- 설정 (발급받으신 API Key를 입력해주세요) ---
 $resend_api_key = 're_4NMjzEwR_Gw5wXgAEpPGsnsxiK4Mdzkrt'; 
 $to_email = 'wjdtn011601@gmail.com';
-$from_email = 'onboarding@resend.dev'; // 도메인 인증 전에는 onboarding@resend.dev 사용
+$from_email = '한결 패션이미지연구소 <onboarding@resend.dev>'; // 보낸이 표시 성함 수정
 // ------------------------------------------
 
 header('Content-Type: application/json; charset=utf-8');
@@ -28,10 +28,10 @@ $contact = strip_tags($input['contact']);
 $type = strip_tags($input['type']);
 $message = nl2br(strip_tags($input['message']));
 
-$subject = "[홈페이지 문의] {$name}님의 문의입니다.";
+$subject = "[한결 홈페이지 문의] {$name}님의 문의입니다.";
 $html_content = "
     <div style='font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee;'>
-        <h2 style='color: #333; border-bottom: 2px solid #333; padding-bottom: 10px;'>새로운 홈페이지 문의 (PHP-Resend)</h2>
+        <h2 style='color: #333; border-bottom: 2px solid #333; padding-bottom: 10px;'>새로운 홈페이지 문의</h2>
         <p><strong>이름:</strong> {$name}</p>
         <p><strong>연락처:</strong> {$contact}</p>
         <p><strong>문의유형:</strong> {$type}</p>
@@ -39,7 +39,7 @@ $html_content = "
             <strong>문의내용:</strong><br>
             {$message}
         </div>
-        <p style='font-size: 12px; color: #999; margin-top: 30px;'>본 메일은 홈페이지 문의 폼을 통해 Resend API(PHP)로 발송되었습니다.</p>
+        <p style='font-size: 12px; color: #999; margin-top: 30px;'>본 메일은 한결 패션이미지연구소 홈페이지 문의 폼을 통해 발송되었습니다.</p>
     </div>
 ";
 

@@ -105,9 +105,9 @@ export default function Home() {
             </h3>
             <div className="w-12 h-0.5 bg-foreground/20"></div>
             <p className="text-gray-600 leading-relaxed text-lg break-keep">
-              한결 패션이미지연구소는 단순히 예쁜 옷을 고르는 법을 알려드리지 않습니다.
-              '왜' 옷이 중요한지, 나에게 어울리는 '기준'은 무엇인지 함께 고민합니다.
-              일시적인 트렌드가 아닌, 당신의 삶을 지탱하는 단단한 이미지를 설계해 드립니다.
+              한결패션이미지연구소는 유행보다 기준을, 과한 변화보다 정확한 선택을 중요하게 생각합니다.
+              옷은 겉모습을 꾸미는 수단이 아니라 자신을 이해하고 존중하는 태도라고 믿습니다.
+              컬러, 체형, 이미지, 환경에 맞는 합리적인 스타일을 통해 조용하지만 신뢰감 있는 이미지를 만들어갑니다.
             </p>
             <div className="pt-4">
               <Button href="/about" variant="text">한결 소개 더보기 →</Button>

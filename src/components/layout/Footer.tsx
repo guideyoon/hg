@@ -6,7 +6,7 @@ export function Footer() {
 
     // Placeholder data - to be updated by user
     const companyInfo = {
-        ceo: '한결',
+        ceo: '장한결',
         address: '울산광역시 남구 번영로 124번길 21, 206호',
         businessLicense: '-',
         contact: '010.8356.8839 | bome0116@naver.com'

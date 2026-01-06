@@ -7,9 +7,11 @@ interface SectionProps {
     className?: string; // Allow additional classes if needed
     id?: string;
     bg?: 'white' | 'gray' | 'none'; // Simple background control
+    fullWidth?: boolean;
+    bgImage?: string;
 }
 
-export function Section({ children, className = '', id, bg = 'white' }: SectionProps) {
+export function Section({ children, className = '', id, bg = 'white', fullWidth = false, bgImage }: SectionProps) {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
 
@@ -39,15 +41,23 @@ export function Section({ children, className = '', id, bg = 'white' }: SectionP
         };
     }, []);
 
-    const bgClass = bg === 'gray' ? 'bg-background' : bg === 'white' ? 'bg-white' : '';
+    const bgClass = bgImage ? '' : (bg === 'gray' ? 'bg-background' : bg === 'white' ? 'bg-white' : '');
+    const imageStyle = bgImage ? {
+        backgroundImage: `url("${bgImage}")`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+    } : {};
 
     return (
         <section
             id={id}
             ref={sectionRef}
-            className={`w-full py-16 md:py-24 ${bgClass} ${className}`}
+            className={`w-full py-16 md:py-24 ${bgClass} ${className} ${bgImage ? 'relative' : ''}`}
+            style={imageStyle}
         >
-            <div className={`max-w-screen-xl mx-auto px-6 md:px-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            {bgImage && <div className="absolute inset-0 bg-white/40"></div>}
+            <div className={`${fullWidth ? 'max-w-full' : 'max-w-screen-xl'} mx-auto px-6 md:px-12 relative z-10 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>
                 {children}
             </div>

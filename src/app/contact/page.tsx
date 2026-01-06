@@ -13,6 +13,11 @@ export default function ContactPage() {
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [statusMessage, setStatusMessage] = useState('');
+    const [isHeroVisible, setIsHeroVisible] = useState(false);
+
+    React.useEffect(() => {
+        setIsHeroVisible(true);
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { id, value } = e.target;
